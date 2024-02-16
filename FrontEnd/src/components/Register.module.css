@@ -1,0 +1,85 @@
+.container {
+    height: 100%;
+    min-height: 100vh;
+    width: 100%;
+    background-image: url("h.jpg");
+    background-repeat: no-repeat;
+    background-size:cover;
+    /* linear-gradient(to right, hsl(209, 36%, 59%), hsl(276, 33%, 50%));  */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .innerBox {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .heading {
+    color: #333;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  .footer {
+    margin-top: 20px;
+  }
+  
+  .error {
+    color: #ff0000;
+  }
+  
+  button {
+    background-color: #28a745;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  button:hover {
+    background-color: #218838;
+  }
+  
+  p {
+    margin-top: 10px;
+    font-size: 14px;
+  }
+  
+  span {
+    color: #007bff;
+    cursor: pointer;
+  }
