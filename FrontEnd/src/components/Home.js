@@ -6,8 +6,9 @@ import { onAuthStateChanged, getAuth } from 'firebase/auth';
 import axios from 'axios';
 import {  useNavigate } from 'react-router-dom';
 import Offensive from './Offensive';
+import Login from './Login';
 
-const Home = () => {
+const Home = (props) => {
   const [file, setFile] = useState(null);
   const [textInput, setTextInput] = useState('');
   const [recordedBlob, setRecordedBlob] = useState(null);
@@ -121,6 +122,7 @@ const Home = () => {
   };
   return (
     <>
+    {props.presentUser?(<>
     {(loading===false) ?(
     <div className="main">  
       <div className={styles.container}>
@@ -173,6 +175,11 @@ const Home = () => {
     </div>
   )}
   </>
+  ):(
+    <Login setCurrentUser={props.login}></Login>
+  )
+}
+</>
   );
 };
 

@@ -22,6 +22,10 @@ const App = () => {
     window.localStorage.setItem('currentUser', JSON.stringify(currentUser));
   }, [currentUser]);
 
+  const handleLogin = (user) =>{
+    setCurrentUser(user);
+  }
+
   return (
     <Router>
       <div>
@@ -74,8 +78,8 @@ const App = () => {
           <Routes>
             <Route path="/login" element={<Login setCurrentUser={setCurrentUser} />} />
             <Route path="/register" element={<Register setCurrentUser={setCurrentUser} />} />
-            <Route path="/logout" element={<Navigate to="/" />} />
-            <Route path="/" element={<Home presentUser={currentUser} />} />
+            <Route path="/logout" element={<Navigate to="/login" />} />
+            <Route path="/" element={<Home presentUser={currentUser} login={handleLogin}/>} />
             <Route
               path="/previousupload"
               element={currentUser ? <PreviousUpload presentUser={currentUser} /> : <Navigate to="/" />}
